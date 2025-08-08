@@ -1,0 +1,89 @@
+<MainScreen>:
+    Image:
+        source: 'back_1.png'
+        keep_ratio: False
+        allow_stretch: True
+    BoxLayout:
+        padding: 0, 0, 0, 100
+        spacing: 100
+        orientation: "vertical"
+        Label:
+            text: "Космо Квиз"
+            font_size: 50
+            font_name: 'Mono'
+
+        Button:
+            text: "Начать"
+            font_name: 'Mono'
+            font_size: 20
+            background_color: (134/255, 180/255, 230/255, 1)
+            size_hint: 0.5, 0.15
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press:
+                root.manager.current = "ChooseDifficulty"
+<ChooseDifficulty>
+    Image:
+        source: 'back_1.png'
+        keep_ratio: False
+        allow_stretch: True
+    BoxLayout:
+        padding: 0, 0, 0, 100
+        spacing: 100
+        orientation: "vertical"
+
+        Label:
+            text: "Выбери уровень сложности"
+            font_size: 30
+            pos_hint: {'center_x': 0.5}
+            text_size: self.size
+            halign: 'center'
+            font_name: 'Mono'
+        GridLayout:
+            spacing: 50
+            size_hint: 0.5, 1
+            pos_hint: {'center_x': 0.5}
+            cols: 1
+            Button:
+                id: diff_1
+                font_size: 20
+                font_name: 'Mono'
+                text: "Звездный Новичок"
+                background_color: (134/255, 180/255, 230/255, 1)
+                on_press: root.diff_1()
+            Button:
+                id: diff_2
+                font_size: 20
+                font_name: 'Mono'
+                text: "Межпланетный астроном"
+                text_size: self.size
+                halign: 'center'
+                padding: 0, 0, 0, 4
+                background_color: (134/255, 180/255, 230/255, 1)
+                on_press: root.diff_2()
+            Button:
+                font_size: 20
+                font_name: 'Mono'
+                id: diff_3
+                text: "Космический Гений"
+                text_size: self.size
+                halign: 'center'
+                padding: 0, 0, 0, 4
+                background_color: (134/255, 180/255, 230/255, 1)
+                on_press: root.diff_3()
+
+<Diff1Screen>
+    Image:
+        source: 'back_1.png'
+        keep_ratio: False
+        allow_stretch: True
+<diff_2_screen>
+    Image:
+        source: 'back_1.png'
+        keep_ratio: False
+        allow_stretch: True
+<diff_3_screen>
+    Image:
+        source: 'back_1.png'
+        keep_ratio: False
+        allow_stretch: True
+
